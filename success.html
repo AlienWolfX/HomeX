@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="theme-color" content="#06f" />
+    <title>HomeX | Success</title>
+    $(if refresh-timeout)
+    $(endif)
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title-wrapper">
+          $(if login-by == 'trial')
+          <h1>Welcome Trial User!</h1>
+          $(elif login-by != 'mac')
+          <h1 class="shake">Welcome <span class="username">$(username)</span>!</h1>
+          $(endif)
+          <p>
+            You are successfully connected
+          </p>
+          <a href="$(link-status)">view status</a>
+        </div>
+
+        <div class="form-footer">
+          <p class="copy-right">Made with ❤️ by <a target="_blank" href="https://github.com/AlienWolfX">AlienWolfX</a></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
