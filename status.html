@@ -13,25 +13,6 @@
     <meta http-equiv="refresh" content="$(refresh-timeout-secs)" />
     $(endif)
   </head>
-
-  <script>
-    $(if advert-pending == 'yes')
-      var popup = '';
-      function focusAdvert() {
-        if (window.focus) popup.focus();
-      }
-      function openAdvert() {
-        popup = open('$(link-advert)', 'hotspot_advert', '');
-        setTimeout("focusAdvert()", 1000);
-      }
-    $(endif)
-      function openLogout() {
-        if (window.name != 'hotspot_status') return true;
-          open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
-          window.close();
-        return false;
-      }
-  </script>
   <body 
     $(if advert-pending == 'yes')	
       onLoad="openAdvert()"
@@ -93,7 +74,7 @@
         $(endif)
 
         <div class="form-footer">
-          <p class="copy-right">Made with ❤️ by <a target="_blank" href="https://github.com/AlienWolfX">Allen Cruiz</a></p>
+          <p class="copy-right">Made with ❤️ by <a target="_blank" href="#">Allen Cruiz</a></p>
           </p>
         </div>
       </div>

@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#06f" />
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
     <title>HomeX | Login</title>
   </head>
   <body>
@@ -36,7 +37,7 @@
       <div class="wrapper">
         <div class="title-wrapper">
           <h1 class="shake">Welcome!</h1>
-          <p>Maayong adlaw!, bisita man ka diris amo balay no? Palihog paki butang ang credentials nga gihatag sa tag-iya. Kung dili aw edi bye bye 😛</p>
+          <p>Maayong adlaw! Palihog paki butang ang <b>credentials</b> nga gihatag sa tag-iya.</p>
         </div>
         <form
           action="$(link-login-only)"
@@ -77,11 +78,39 @@
           $(if trial == 'yes')
             <p style="margin-bottom: 15px;">Huy seryoso? <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Hi uy!</a></p>
           $(endif)
-          <p class="copy-right">Made with ❤️ by <a target="_blank" href="me.html">Allen Cruiz</a></p>
+          <p class="copy-right">Made with ❤️ by <a target="_blank" href="#">Allen Cruiz</a></p>
         </div>
       </div>
     </div>
 
+    <!-- For future use -->
+    <!-- <script src="./js/sweetalert2.all.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          html: `
+            <div style="font-size:1.1em;">
+              <p></p>
+            </div>
+          `,
+          background: "#f0f4ff",
+          width: 400,
+          icon: "info",
+          iconColor: "#1976d2",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+          confirmButtonText: "Okay, Sige!",
+          confirmButtonColor: "#1976d2",
+          customClass: {
+            popup: "swal2-border-radius",
+          },
+        });
+      });
+    </script> -->
     <script type="module" src="./loginScript.js"></script>
     <script>
       const inputPassword = document.getElementById("password");
@@ -90,7 +119,7 @@
       toggleShowPassword.addEventListener("click", () => {
         if (inputPassword.type === "text") {
           inputPassword.type = "password";
-          toggleShowPassword.textContent = "👁️"; 
+          toggleShowPassword.textContent = "👁️";
         } else {
           inputPassword.type = "text";
           toggleShowPassword.textContent = "🙈";
